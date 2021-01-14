@@ -1,8 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-//const CopyPlugin = require('copy-webpack-plugin');
 
 const srcPath = path.resolve(__dirname, './app');
 const buildPath = path.resolve(__dirname, 'dist');
@@ -63,12 +62,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'ROW reporting form',
-      template: path.join(srcPath, "views/index.html"),
-      filename: "./index.html",
-      excludeChunks: [ 'server' ]
-    }), 
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "app.min.css"
     }),
