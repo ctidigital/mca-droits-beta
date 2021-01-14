@@ -4,8 +4,8 @@ const PORT = process.env.PORT || 8080
 
 // NPM dependencies
 const express = require('express')
-const startRoute = require('./routes/start')
-const removedPropertyCheckRoute = require('./routes/removed-property-check')
+const startRoute = require('./app/routes/start')
+const removedPropertyCheckRoute = require('./app/routes/removed-property-check')
 const path = require('path')
 const nunjucks = require('nunjucks')
 
@@ -23,7 +23,7 @@ app.set("view engine", "html")
 
 nunjucks.configure([
   "node_modules/govuk-frontend/",
-  'views/'
+  'app/views/'
 ],
 {
   autoescape: false,
