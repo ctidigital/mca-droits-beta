@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Maritime and Coastguard Agency - Receiver of Wreck web application for reporting wreck material recovered from the sea and shores of the UK",
   "scripts": {
-    "server": "nodemon -r esm server.js",
+    "server": "node -r esm server.js",
     "build": "webpack",
     "build:prod": "webpack --env.production",
     "watch": "webpack --watch",
@@ -33,6 +33,7 @@
     "copy-webpack-plugin": "^6.1.0",
     "css-loader": "^4.3.0",
     "esm": "^3.2.25",
+    "express-validator": "^6.9.2",
     "file-loader": "^6.1.0",
     "keypather": "^3.1.0",
     "mini-css-extract-plugin": "^0.11.2",
@@ -48,7 +49,6 @@
     "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^4.2.1",
     "url-loader": "^4.1.0",
-    "validator": "^13.5.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
